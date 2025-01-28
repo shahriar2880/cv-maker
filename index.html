@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CV Maker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">CV Maker</h1>
+        <form id="cvForm">
+            <div class="mb-3">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required class="form-control"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required class="form-control">
+            </div>
+
+            <div class="mb-3">
+                <label for="division">Division:</label>
+                <div class="">
+                    <select id="division" class="form-control"></select>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="district">District:</label>
+                <div class="">
+                    <select id="district" class="form-control" disabled></select>
+                </div>
+            </div>
+
+            <div id="educationSection">
+                <h2>Education</h2>
+                <div class="education-row">
+                    <div class="row mb-3">
+                        <div class="col-md-4">
+                            <label for="qualification">Qualification:</label>
+                            <input type="text" id="qualification" name="qualification[]" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="institution">Institution:</label>
+                            <input type="text" id="institution" name="institution[]" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="graduationYear">Graduation Year:</label>
+                            <input type="number" id="graduationYear" name="graduationYear[]" class="form-control">
+                        </div>
+                        <div class="col-md-1">
+                            <button type="button" class="btn btn-danger remove-education">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary add-education">Add Education</button>
+
+
+            <div class="mb-3">
+                <h2>Skills</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="skillCategory">Skill Category:</label>
+                        <select id="skillCategory" name="skillCategory" class="form-control">
+                            <option value="">Select Category</option>
+                            <option value="">Web</option>
+                            </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="subSkill">Sub-Skill:</label>
+                        <select id="subSkill" name="subSkill" class="form-control">
+                            <option value="">Select Sub-Skill</option>
+                            </select>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="skills">Skills:</label>
+                <select id="skills" name="skills[]" class="form-control" multiple="multiple"></select>
+            </div>
+
+            <div id="workExperienceSection">
+                <h2>Work Experience</h2>
+                <div class="work-experience-row">
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="jobTitle">Job Title:</label>
+                            <input type="text" id="jobTitle" name="jobTitle[]" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="companyName">Company Name:</label>
+                            <input type="text" id="companyName" name="companyName[]" class="form-control">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6">
+                            <label for="startDate">Start Date:</label>
+                            <input type="date" id="startDate" name="startDate[]" class="form-control">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="endDate">End Date:</label>
+                            <input type="date" id="endDate" name="endDate[]" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <button type="button" class="btn btn-danger remove-experience">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary add-experience">Add Experience</button>
+
+
+            <div class="mb-3">
+                <label for="languages">Languages:</label>
+                <select id="languages" name="languages[]" class="form-control" multiple="multiple">
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-success">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="script.js"></script> </body>
+</html>
