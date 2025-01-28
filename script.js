@@ -34,27 +34,39 @@ $(document).ready(function () {
     );
   });
 
+
+  var skills = [
+    { id: 1, text: "JavaScript" },
+    { id: 2, text: "Python" },
+    { id: 3, text: "Java" },
+  ];
+  $("#skills").select2({ data: skills });
+
   // Handle Skill Category change
-  $("#skillCategory").on("change", function () {
+  $('#skillCategory').on('change', function() {
     var selectedCategoryId = $(this).val();
-    $("#subSkill").html('<option value="">Select Sub-Skill</option>'); // Clear existing sub-skills
+    $('#subSkill').html('<option value="">Select Sub-Skill</option>'); 
+    $('#subSkill').prop('disabled', true); // Disable sub-skill dropdown initially
 
     if (selectedCategoryId) {
-      switch (selectedCategoryId) {
-        case "1": // Programming
-          $("#subSkill").select2({ data: programmingSkills });
-          break;
-        case "2": // Design
-          $("#subSkill").select2({ data: designSkills });
-          break;
-        case "3": // Marketing
-          $("#subSkill").select2({ data: marketingSkills });
-          break;
-        default:
-          break;
-      }
+        switch (selectedCategoryId) {
+            case '1': // Programming
+                $('#subSkill').select2({ data: programmingSkills });
+                $('#subSkill').prop('disabled', false); // Enable sub-skill dropdown
+                break;
+            case '2': // Design
+                $('#subSkill').select2({ data: designSkills });
+                $('#subSkill').prop('disabled', false); 
+                break;
+            case '3': // Marketing
+                $('#subSkill').select2({ data: marketingSkills });
+                $('#subSkill').prop('disabled', false); 
+                break;
+            default:
+                break;
+        }
     }
-  });
+});
 
   // Sample data for Languages (replace with your actual data)
   var languages = [
