@@ -39,6 +39,20 @@ $(document).ready(function () {
     { id: 1, text: "JavaScript" },
     { id: 2, text: "Python" },
     { id: 3, text: "Java" },
+    { id: 4, text: "Go" },
+    { id: 5, text: "Ruby" },
+    { id: 6, text: "SQL" },
+    { id: 7, text: "Perl" },
+    { id: 8, text: "PHP" },
+    { id: 9, text: "R" },
+    { id: 10, text: "Swift" },
+    { id: 11, text: "Dart" },
+    { id: 12, text: "Kotlin" },
+    { id: 13, text: "C++" },
+    { id: 14, text: "Scala" },
+    { id: 15, text: "TypeScript" },
+    { id: 16, text: "BASIC" },
+    { id: 17, text: "C" },
   ];
   $("#skills").select2({ data: skills });
 
